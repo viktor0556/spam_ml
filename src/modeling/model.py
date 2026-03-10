@@ -30,8 +30,9 @@ def clfModel():
   accuracy = (total / len(y_test)) * 100
   
   cm = confusion_matrix(y_test, y_pred)
-  print("Confusion matrix:")
-  print(cm)
+  # print("Számok Confusion matrix:")
+  # print(cm)
+  print("vectorizer: ", vectorizer)
   
   """          Predicted
            ham   spam
@@ -45,7 +46,7 @@ def clfModel():
   
   """                precision    recall  f1-score   support
   (precision: mennyi volt tényleg spam vagy ham) 
-  (recall: Az összes való spam közül mennyit talált meg?)
+  (recall: Az összes valós spam közül mennyit talált meg?)
   (f1-score: precision és recall egyensúlya)
           ham       0.61      0.77      0.68        44         
           spam       0.69      0.50      0.58        44
@@ -54,7 +55,8 @@ def clfModel():
     macro avg       0.65      0.64      0.63        88
   weighted avg       0.65      0.64      0.63        88 """
   
-  return round(accuracy, 2)
+  return cm, round(accuracy, 2)
+
 
 if __name__ == "__main__":
   print(clfModel())

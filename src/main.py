@@ -15,3 +15,5 @@ def main(path: str) -> Tuple[List[str], List[str]]:
     y.append(i['label'])
     
   return X, y
+
+# print(main("./messages_data/messages.csv"))

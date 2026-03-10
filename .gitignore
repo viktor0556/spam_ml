@@ -1,5 +1,9 @@
 __pycache__/
 *.pyc
 models/
-data/
+messages_data/
 .env
+GIT_WORKFLOW.md
+project_progress.md
+metric_formulas.md
+ML_notes.md

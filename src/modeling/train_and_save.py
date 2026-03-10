@@ -6,7 +6,7 @@ import joblib
 from src.main import main
 
 def train_and_save():
-    X, y = main(path="./data/messages.csv")
+    X, y = main(path="./messages_data/messages.csv")
 
     model = make_pipeline(
         TfidfVectorizer(),
